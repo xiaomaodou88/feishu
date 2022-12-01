@@ -3,7 +3,9 @@
         "@babel/preset-env",
         "@babel/preset-react"
     ],
-    "plugins": [
-        "@babel/plugin-proposal-class-properties"
+    "plugins": [  //执行的顺序是从右向左，所以基础插件要放在最后
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+        ["@babel/plugin-transform-runtime"]
     ]
-  }
+}

@@ -35,8 +35,9 @@ module.exports = {
     devServer: {
         // contentBase: './build',
         port: 8081, // 端口号
+        hot: true,
         // inline: true,
-        hot: true
+        historyApiFallback:true
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
